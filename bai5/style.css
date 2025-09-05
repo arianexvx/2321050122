@@ -1,0 +1,60 @@
+
+body {
+  margin: 0px;
+}
+nav {
+  background-color: #0c4ca3;
+  
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center; /*đi theo display:flex; đây là 1 cặp*/
+  /*gap: 20px; set khoảng cách các chữ*/
+  list-style: none;
+}
+li{
+    padding: 15px;
+}
+.border{
+    border-right:1px solid gray ;
+}
+.danhmuc-lienket {
+  color: white;
+  text-decoration: none;
+  font-family: Roboto, Arial, Tahoma;
+}
+.Banner-QC{
+    display:flex;
+    justify-content: center;
+}
+.qc{
+    display:flex;
+    justify-content: space-between;
+}
+header{
+    border-bottom: 10px solid #f1f1f2;
+}
+h1{
+    color:#0c4ca3;
+}
+.box{
+    display:flex;
+    weight:150px;
+    height:300px;
+}
+.box1{
+    background-color:#0c4ca3;
+     width:150px;
+    height:300px;
+}
+.box2{
+    background-color:#0ca37b;
+}
+.box3{
+    background-color:red;   
+}
+.box4{
+    background-color:#a30c8c;
+}
