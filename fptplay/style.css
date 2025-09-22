@@ -1,0 +1,102 @@
+body{
+  background:#222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14;
+  margin:0;
+}
+header{
+  margin:0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:black;
+  color:white;
+  width:80%;
+  
+}
+.header-left img{
+  margin-left:-30vh;
+  height:40px;
+}
+.header-right1 {
+  display:flex;
+  align-items: center;
+  padding:60px;
+  color:#444;
+  
+}
+.header-right1 i {
+  margin: 0 10px;
+}
+ul{
+  list-style: none;
+  display:flex;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  
+}
+ul li a {
+  
+  text-decoration: none;
+  color:#444;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+main{
+  background:#222;
+  color:white;
+  width:70%;
+  height:1000px;
+  margin:auto;
+}
+.container {
+  background:#222;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-mid {
+  back-ground:#444;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.qc {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.qc img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 150px; 
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Căn giữa nội dung */
+   /* Giảm padding để khít */
+  box-sizing: border-box; /* Bao gồm padding */
+}
+
+.banner img {
+  height: 100%;
+  border-radius:25%;
+  object-fit: contain;
+  max-width: 100%;
+}
+.list-film{
+  display:flex;
+  gap:10px;
+  width:1200px;
+}
+.list-film img{
+  border-radius: 15px
+}

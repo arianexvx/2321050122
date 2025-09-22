@@ -1,0 +1,134 @@
+body{
+    width:95%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+header{
+    background:white;
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: space-between;
+}
+header-right {
+    display:flex;
+}
+ul{
+  list-style: none;
+  display:flex;
+  gap:20px;
+  align-items: center;
+  justify-content:center;
+  
+}
+main{
+    width:100%;
+    height:100vh;
+}
+main .main-top{
+    background:white;
+    height:50vh;
+}
+.main-top p {
+    color:orange;
+    display:flex;
+    justify-content: center;
+}
+.main-top h4{
+    display:flex;
+    justify-content:center;
+}
+.main-top-left img{
+    width:80%;
+    border-radius:10px;
+    
+}
+.box{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.main-top-right .box1 p{
+    color:black;
+    background:white;
+    width:40vh;
+    height:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+     border: 1px solid grey; 
+
+}
+.main-top-right .box2 p{
+     color:black;
+    background:white;
+    width:40vh;
+    height:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid grey; 
+}
+.boxx{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+}
+ .title h4 {
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    
+    
+}
+.title-box{
+    padding-bottom:60px;
+}
+.box-left img{
+    width:90%;
+}
+.box-right{
+    gap:40px;
+}
+.title-box p{
+    background:white;
+    width:40vh;
+    height:90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+     border: 1px solid grey; 
+}
+.title-box2{
+    display:flex;
+    gap:70px;
+    padding-bottom: 50px;
+    justify-content: center;
+
+}
+.note1{
+    background:blue;
+    width:10vh;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+     border: 1px solid grey; 
+     color:white;
+}
+.note2{
+    background:white;
+    width:10vh;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+     border: 1px solid blue; 
+     color:blue;;
+}
