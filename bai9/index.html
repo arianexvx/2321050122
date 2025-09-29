@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //mảng
+        let arr = [1,2,3,4,'a','b','c',2,3];
+        arr[3]=6;
+        document.writeln(arr);
+        document.writeln(Array.isArray(arr)); //kiểm tra có phải mảng kh điền tên mảng vào ngoặc tròn 
+        document.writeln(arr.length);
+        document.writeln(arr[2]);
+        document.writeln(arr.lastIndexOf(3) +"<br>")//kiểm tra trong mảng có ptu mình tìm kiếm ko?
+        //LastIndex từ dưới lên trên Index từ trên xuống dưới
+        var a,b,c,d;
+        a= [1,2,3];
+        b="JavaScript";
+        c=[42,"JS"]
+        d=a.concat(b,c); //nối mảng
+        //d=d.join(" ");
+        d.pop(); // xóa ptu cuối
+        d.push("Hải Anh iu"); //thêm ptu vào cuối dsach
+        d.reverse(); //đảo chuỗi
+        d.shift(); //xóa ptu đầu tiên
+        document.writeln(d +"<br>");
+
+        //if else
+        let so=10000000000000000000000001;
+        let soCuoi= parseInt(so[so.lenght-1]);
+        if(soCuoi %2==0){
+            document.writeln(so + " là số chẵn");
+        }
+        else{
+            document.writeln( so + " là số lẻ");
+        };
+        let now = new Date().getHours();
+        //5->10: Chào buổi sáng
+        //10->13: chào buổi trưa
+        //13->17h:chào buổi chiều
+        //17h->22h: chào buổi tối
+        // còn lại chào buổi tối
+        document.writeln(now);
+        if(now >=5 && now <10){
+            document.writeln("chào buổi sáng");
+        }
+        else if(now >=10 && now <13){
+            document.writeln("chào buổi trưa")
+        }
+         else if(now >=13 && now <17){
+            document.writeln("chào buổi chiều")
+        }
+         else if(now >=17 && now <22){
+            document.writeln("chào buổi tối")
+        }
+        else {
+            document.writeln("chào buổi đêm")
+        };
+      let diem_a = 8;
+      let diem_b = 9;
+      let diem_c = 10;
+      tong = diem_a * 0.6 + diem_b * 0.3 + diem_c * 0.1;
+      if (tong <= 10 && tong > 8) {
+        document.writeln("A");
+      } else if (tong <= 8 && tong > 7) {
+        document.writeln("B");
+      } else if (tong <= 7 && tong > 5) {
+        document.writeln("C");
+      } else if (tong <= 5 && tong > 4) {
+        document.writeln("D");
+      } else if(tong<=4 && tong>=0) {
+        document.writeln("F");
+      }
+      else{
+        document.writeln("điểm kh hợp lệ")
+      }
+    </script>
+</body>
+</html>
