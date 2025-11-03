@@ -6,68 +6,56 @@
     <title>Document</title>
   </head>
   <body>
-    <!--  Bài tập: Tính điểm chữ -->
+    
     <h1>Tính điểm chữ</h1>
     <div>
-      <p>Nhập điểm A</p>
-      <input type="number" id="diemA" />
+      <p>Nhập số thứ nhất</p>
+      <input type="number" id="sothuNhat" />
     </div>
     <div>
-      <p>Nhập điểm B</p>
-      <input type="number" id="diemB" />
-    </div>
-    <p>Nhập điểm C</p>
-    <div><input type="number" id="diemC" /></div>
+      <p>Nhập số thứ hai</p>
+      <input type="number" id="sothuHai" />
 
-    <div><button onclick="tinhDiem()">Tính điểm</button></div>
+
+    <div><button onclick="tinhToan('tong')">Tổng</button></div>
+    <div><button onclick="tinhToan('hieu')">hiệu</button></div>
+    <div><button onclick="tinhToan('tich')">Tích</button></div>
+    <div><button onclick="tinhToan('thuong')">Thương</button></div>
     <div>Kết quả: <input type="text" id="ketQua" /></div>
 
     <script>
-      function tinhDiem() {
-        let diemA = parseFloat(document.getElementById("diemA").value);
-        let diemB = parseFloat(document.getElementById("diemB").value);
-        let diemC = parseFloat(document.getElementById("diemC").value);
+      function tinhToan(pheptinh) {
+        let sothuNhat = parseFloat(document.getElementById("sothuNhat").value);
+        let sothuHai = parseFloat(document.getElementById("sothuHai").value);
+      
         let canhBao = "";
         if (!diemA) {
-          canhBao += "nhập điểm A";
+          canhBao += "nhập số thứ nhất";
         }
         if (!diemB) {
-          canhBao += "nhập điểm B";
+          canhBao += "nhập số thứ hai";
         }
-        if (!diemC) {
-          canhBao += "nhập điểm C";
+        
         }
         if (canhBao) {
           alert(canhBao);
           return;
         }
 
-        let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
-
-        if (
-          diemA < 0 ||
-          diemB < 0 ||
-          diemC < 0 ||
-          diemA > 10 ||
-          diemB > 10 ||
-          diemC > 10
-        ) {
-          alert("Điểm nhập không hợp lệ (0 - 10)");
-          return;
-        } else if (tong <= 10 && tong > 8) {
-          document.getElementById("ketQua").value = 'A'
-        } else if (tong <= 8 && tong > 7) {
-          document.getElementById("ketQua").value = 'B';
-        } else if (tong <= 7 && tong > 5) {
-          document.getElementById("ketQua").value = 'C';
-        } else if (tong <= 5 && tong > 4) {
-          document.getElementById("ketQua").value = 'D';
-        } else if (tong <= 4 && tong >= 0) {
-          document.getElementById("ketQua").value = 'F';
-        }
-
-        document.getElementById("ketQua").value ;
+      if(pheptinh == "tong") {
+        ketQua = sothuNhat + sothuHai;
       }
+      else if(pheptinh == "hieu") {
+        ketQua = sothuNhat + sothuHai
+      }
+       else if(pheptinh == "hieu") {
+        ketQua = sothuNhat + sothuHai
+      }
+       else if(pheptinh == "hieu") {
+        ketQua = sothuNhat + sothuHai
+      }
+
+        
     </script>
   </body>
 </html>

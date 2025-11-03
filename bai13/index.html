@@ -8,14 +8,41 @@
     <style>
       body {
         text-align: center;
+        background :pink;
+        width:100%;
+        display:flex;
+        text-align: center;
+        justify-content: center;
+
       }
       .nhapThongTin {
         display: flex;
         justify-content: center;
       }
+      .container{
+        text-align: center;
+        width:500px;
+        background:antiquewhite;
+        text-align:center;
+        padding:10px;
+        border-radius: 10%;
+        margin-top:80px;
+      }
+      input{
+        border-radius: 9px;
+      }
+      .nhap-Tinh{
+        text-align: center;
+        display:flex;
+        
+      }
+      .nhap-Tinh div{
+        margin-top:10px;
+      }
     </style>
   </head>
   <body>
+    <div class="container">
     <h1>Tính BMI</h1>
     <div class="nhapThongTin">
       <div class="nhap-tinh">
@@ -36,6 +63,7 @@
           src="./z7173870475372_38cac1af6365012333203ca3a0ccaeb3.jpg"
         />
       </div>
+      </div>
     </div>
     <script>
       function tinhToan() {
@@ -53,19 +81,25 @@
         }
 
         let tinh = canNang / (chieuCao * chieuCao);
-        document.getElementById("ketQua").value = "tinh";
+        document.getElementById("ketQua").value = tinh.toFixed(2) ;
+        cheDo(tinh);
       }
-      function cheDo(){
+      function cheDo(tinh){
         if(tinh<18.5){
-            document.getElementsByClassName("anh")[0].src = "C:\Users\haian\PTWeb\bai13\z7173870276393_8d9e4cda002d0ee4bbeda73ed2147a03.jpg";
+            document.getElementsByClassName("anh")[0].src = "z7173870276393_8d9e4cda002d0ee4bbeda73ed2147a03.jpg";
         }
-        else if(tinh>18.5 && tinh<24.9){
-              document.getElementsByClassName("anh")[0].src ="C:\Users\haian\PTWeb\bai13\z7173870475372_38cac1af6365012333203ca3a0ccaeb3.jpg";
+        else if(tinh>=18.5 && tinh<24.9){
+            document.getElementsByClassName("anh")[0].src ="z7173870475372_38cac1af6365012333203ca3a0ccaeb3.jpg";
         }
-        else if(tinh>25 && tinh<29){
-            document.getElementsByClassName("anh")[0].src ="C:\Users\haian\PTWeb\bai13\z7173870376121_2decd8a655f001071cf961efa90f778d.jpg"
+        else if(tinh>=25 && tinh<29){
+            document.getElementsByClassName("anh")[0].src ="z7173870376121_2decd8a655f001071cf961efa90f778d.jpg";
         }
-        else if(tinh<)
+        else if(tinh>=30 && tinh<39.9){
+            document.getElementsByClassName("anh")[0].src ="z7173870376121_2decd8a655f001071cf961efa90f778d.jpg";
+        }
+          else if(tinh>=40){
+            document.getElementsByClassName("anh")[0].src ="z7173870444523_e30867f79d29fa2e23ceb49a67f0bdbd.jpg";
+        }
       }
     </script>
   </body>
