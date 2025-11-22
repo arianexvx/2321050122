@@ -91,6 +91,11 @@ main {
   margin: 0;
   border-radius: 8px;
 }
+.anh-bn{
+  position: relative;
+  width:100%;
+  height:100%;
+}
 .anh-bn img {
   width: 100%;
   height: auto;
@@ -98,6 +103,7 @@ main {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   margin-bottom: 20px;
+  z-index:1;
 }
 /* LIST */
 /* khúc 1 */
@@ -113,10 +119,16 @@ main {
   align-items:flex-start;
   width: 200px;
 }
-.film img {
+ .film img {
   width: 100%;
-  height: auto;
+  height: 350px  ;
   border-radius: 8px;
+  object-fit: cover;
+  display:block;
+}
+.film p {
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 /* Khúc 2 */
 .film2 {
@@ -128,8 +140,11 @@ main {
 }
 .film2 img {
   width: 100%;
-  height: auto;
+  height: 250px ;
   border-radius: 8px;
+}
+.film2 p{
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* khúc 3 */
 .film3 {
@@ -157,6 +172,64 @@ main {
   height: auto;
   border-radius: 8px;
 }
+.thongtin {
+  position: absolute;
+  bottom: 0px; /* chỉnh vị trí chữ cao thấp */
+  
+  color: white;
+  text-shadow: black;
+  display:flex;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index:2;
+  flex-direction: column;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  width:100%;
+   
+
+}
+.hang_ngang{
+  display:flex;
+  padding-left:30px;
+  gap:20px;
+}
+.hang_duoi{
+  display:flex;
+}
+.hang_duoi i{
+  padding:20px;
+  font-size:20px;
+  margin-left: 20px;
+  color:white;
+  border-radius: 70px;
+  background:grey;
+  height:40px;
+  width:20px;
+  align-items:center ;
+  justify-content: center;
+  display:flex;
+  
+}
+.trailer{
+  width:140px;
+  height:40px;
+  margin-left:30px;
+  border-radius: 20px;
+  background:rgb(255, 94, 0);
+  color:white;
+  margin-top:auto;
+  margin-bottom:50px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+}
+
+
+.thongtin p {
+  margin-left:30px;
+  font-size: 20px;
+  margin-left:10px;
+}
+
 /* khuc 5 */
 /* .film5 {
   margin-right: 10px;
@@ -299,13 +372,5 @@ footer {
 }
 .footer-bot .logo img {
   width: 20px;
-  height: auto;
-}
-.list .film-container{
-  width: 100%;
-  height: auto;
-}
-.list .film-container img{
-  width: 100%;
   height: auto;
 }
