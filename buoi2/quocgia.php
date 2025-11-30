@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-
-    <h1>Trang chủ</h1>
-   
+    <h1>Quốc Gia</h1>
 </body>
 </html>

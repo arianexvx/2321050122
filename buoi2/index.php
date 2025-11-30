@@ -1,18 +1,87 @@
-<?php
-   //sesion lưu server, tính bảo mật cao 
-    session_start();
-    $_SESSION["name"] = "Hai Anh 123";
-    echo $_SESSION
-    //cookie lưu ở phía ng dùng và sdung trong trường hợp ttin kh nhạy cảm, ít qtrong
-    $cookieName="user";
-    $cookieValue="Hải Anh";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang admin</title>
+    <style>
+        body{
+            margin:0;
+        }
+        nav{
+            background:pink;
+            display:flex;
+            justify-content: space-between;
+        }   
+        ul{
+            display:flex;
+            list-style: none;
+            margin:0;
+            gap:10px;
+        }
+        li{
+           /*padding:10px;*/
 
-    //86400=30 ngay
-    // setcookie($cookieName, $cookieValue,time() +(86400), "/" )
-    if(isset($_COOKIE[cookieName]) ){
-        echo "cookie đã tồn tại";
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <?php 
+    session_start();
+    if(!isset($_SESSION["username"])){
+        header('location: login.php');
     }
-    else{
-        echo "cookie ch tồn tại";
+    ?>
+    
+
+    <header>
+        <nav>
+            <ul class="">
+                <li class=""><a class="" href="index.php?page_layout=trangchu">Trang chủ</a></li>
+                <li class=""><a class="" href="index.php?page_layout=phim">Phim</a></li>
+                <li class=""><a class="" href="index.php?page_layout=theloai">Thể loại</a></li>
+                <li class=""><a class="" href="index.php?page_layout=quocgia">Quốc gia</a></li>
+                <li class=""><a class="" href="index.php?page_layout=nguoidung">Người dùng</a></li>
+            </ul>
+            <ul class="">
+                <li class=""><?php  echo "xin chào" . $_SESSION["username"];?></li>
+                <li class=""><a class="" href="index.php?page_layout=dangxuat">Đăng xuất</a></li>
+                
+            </ul>
+        </nav> 
+        <?php
+            if(isset($_GET['page_layout'])){
+    switch($_GET['page_layout']){
+        case "trangchu":
+            include "trangchu.php";
+            break;
+
+        case "phim":
+            include "phim.php";
+            break;
+
+        case "theloai":
+            include "theloai.php";
+            break;
+
+        case "quocgia":
+            include "quocgia.php";
+            break;
+
+        case "nguoidung":
+            include "nguoidung.php";
+            break;
+
+        case "dangxuat":
+            
+            break;
     }
-?>
+}
+        ?>
+    </header>
+ 
+</body>
+</html>
