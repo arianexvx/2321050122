@@ -40,7 +40,7 @@
    if (mysqli_num_rows($result) > 0) {
     session_start();
     $_SESSION["username"] = $tenDangNhap;
-    header('location: trangchu.php');
+    header('location: index.php');
 }
    
   

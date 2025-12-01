@@ -12,15 +12,16 @@
             background:pink;
             display:flex;
             justify-content: space-between;
+            
         }   
         ul{
             display:flex;
             list-style: none;
             margin:0;
-            gap:10px;
+            
         }
         li{
-           /*padding:10px;*/
+           padding:10px;
 
         }
         a{
@@ -52,7 +53,10 @@
                 
             </ul>
         </nav> 
-        <?php
+      
+    </header>
+ <main>
+      <?php
             if(isset($_GET['page_layout'])){
     switch($_GET['page_layout']){
         case "trangchu":
@@ -74,6 +78,9 @@
         case "nguoidung":
             include "nguoidung.php";
             break;
+        case "themnguoidung":
+            include "themnguoidung.php";
+            break;
 
         case "dangxuat":
             
@@ -81,7 +88,6 @@
     }
 }
         ?>
-    </header>
- 
+</main>
 </body>
 </html>
