@@ -7,16 +7,38 @@
     <style>
         table{
             width:100%;
+            border-collapse: collapse;
         }
-        .xoa{
+         td{
+            padding:10px;
+            
+        }
+       .them{
+            padding: 10px 10px;
+            background:pink;
+            margin-top:30px;
+            border-radius:30px;
+            justify-content:center;
+            display:flex;
+        }
+        .them:hover{
+            background:coral;
+        }
+        .capnhat{
             color:white;
             padding:0 10px;
             background: red;
             
         }
-        </style>
-    <h1>Thông tin Quốc gia</h1>
 
+        .capnhat:hover{
+            background:coral;
+        }
+        </style>
+    <div style="display:flex;justify-content:space-between;align-item:center;">
+    <h1>Thông tin Quốc gia</h1>
+     <a class="them" href="themquocgia.php?"> Thêm quốc gia  </a>
+    </div>
       <table border=1>
         <tr>
             <th>ID</th>
@@ -35,8 +57,9 @@
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['ten_quoc_gia']; ?></td>
              <td>
-                    <button>Sửa</button>
-                    <a class="xoa" href="xoanguoidung.php?id=<?php echo $row["id"] ?>"> Xóa </a>
+                    
+                    <a class="capnhat" href="capnhatquocgia.php?id=<?php echo $row["id"] ?>"> Cập nhật </a>
+                    <a class="xoa" href="xoaquocgia.php?id=<?php echo $row["id"] ?>"> Xóa </a>
             </td>  
                 
         </tr>

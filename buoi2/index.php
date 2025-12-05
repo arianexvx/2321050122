@@ -46,6 +46,7 @@
                 <li class=""><a class="" href="index.php?page_layout=theloai">Thể loại</a></li>
                 <li class=""><a class="" href="index.php?page_layout=quocgia">Quốc gia</a></li>
                 <li class=""><a class="" href="index.php?page_layout=nguoidung">Người dùng</a></li>
+                 <li class=""><a class="" href="index.php?page_layout=phimtheloai">Phim thể loại</a></li>
             </ul>
             <ul class="">
                 <li class=""><?php  echo "xin chào" . $_SESSION["username"];?></li>
@@ -57,6 +58,8 @@
     </header>
  <main>
       <?php
+      include "connect.php";
+
             if(isset($_GET['page_layout'])){
     switch($_GET['page_layout']){
         case "trangchu":
@@ -70,7 +73,9 @@
         case "theloai":
             include "theloai.php";
             break;
-
+         case "capnhattheloai":
+            include "capnhattheloai.php";
+            break;
         case "quocgia":
             include "quocgia.php";
             break;
@@ -81,9 +86,37 @@
         case "themnguoidung":
             include "themnguoidung.php";
             break;
-
+        case "capnhatnguoidung":
+            include "capnhatnguoidung.php";
+            break;
+         case "capnhatphim":
+            include "capnhatphim.php";
+            break;
+         case "capnhatquocgia":
+            include "capnhatquocgia.php";
+            break;
+        case "themquocgia":
+            include "themquocgia.php";
+            break;
+        case "xoaquocgia":
+            include "xoaquocgia.php";
+            break;
+        case "themtheloai":
+            include "themtheloai.php";
+            break;
+         case "xoatheloai":
+            include "xoatheloai.php";
+            break;
+         case "xoaphim":
+            include "xoaphim.php";
+            break;
+        case "phimtheloai":
+            include "xoaphim.php";
+            break;
         case "dangxuat":
-            
+            session_unset();
+            session_destroy();
+            header('location:login.php');
             break;
     }
 }

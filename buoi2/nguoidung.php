@@ -7,6 +7,7 @@
     <style>
         table{
             width:100%;
+            border-collapse: collapse;
         }
         .xoa{
             color:white;
@@ -17,15 +18,7 @@
             padding:10px;
             
         }
-        .them{
-            padding: 10px 10px;
-            background:floralwhite;
-
-        }
-        .them:hover{
-            background:coral;
-        }
-
+        
         </style>
 </head>
 <body>
@@ -47,7 +40,7 @@
         </tr>
         <?php 
         include("connect.php");
-        $sql = "SELECT nd.*, vt.ten_vai_tro FROM nguoi_dung nd JOIN vai_tro vt ON nd.vai_tro_id = vt.id";
+        $sql = "SELECT nd.*, vt.ten_vai_tro FROM nguoi_dung nd JOIN vai_tro vt ON nd.vai_tro_id = vt.id ORDER BY nd.id ASC";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
         ?>
@@ -56,13 +49,13 @@
         <tr>
             <td><?php echo $row['ten_dang_nhap']; ?></td>
                 <td><?php echo $row['ho_ten']; ?></td>
-                <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['sdt']; ?></td>
+                <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['ten_vai_tro']; ?></td>
                 <td><?php echo $row['ngay_sinh']; ?></td>
+                
                 <td>
-                <td>
-                     <a class="sua" href="suanguoidung.php?id=<?php echo $row["id"] ?>"> Sửa </a>
+                     <a class="capnhat" href="index.php?page_layout=capnhatnguoidung&id=<?php echo $row["id"] ?>"> Cập nhật </a>
                     <a class="xoa" href="xoanguoidung.php?id=<?php echo $row["id"] ?>"> Xóa </a>
                 </td>
         </tr>
